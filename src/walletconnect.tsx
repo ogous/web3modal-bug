@@ -4,7 +4,7 @@ import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal, useWeb3ModalEvents } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
-import {Toaster, toast} from 'react-hot-toast'
+import { Toaster, toast } from 'react-hot-toast'
 
 export default function WalletConnectProvider({ children }: { children: React.ReactNode }) {
     const chains = [mainnet]
@@ -28,7 +28,7 @@ export default function WalletConnectProvider({ children }: { children: React.Re
         publicClient
     })
     const ethereumClient = new EthereumClient(wagmiConfig, chains)
-  
+
 
     return <>
         <WagmiConfig config={wagmiConfig}>
